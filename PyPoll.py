@@ -1,13 +1,3 @@
-import csv
-import os
-#Assign a variable for the file to load and the path.
-file_to_load = os.path.join("Resources", "election_results.csv")
-#Open the election results and read the file.
-with open(file_to_load) as election_data:
-
-    #Print the file object.
-    print(election_data)
-
 #Add our dependencies.
 import csv
 import os
@@ -19,11 +9,15 @@ file_to_save = os.path.join("analysis","election_analysis.txt")
 
 # 1. Initialize a total vote counter
 total_votes = 0
-
 # Candidate Options and candidate votes
 candidate_options = []
 #1 Declare he empty dictionary
 candidate_votes ={}
+
+#Winning Candidate and winning count tracker
+winning_candidate = ""
+winning_count = 0
+winning_percentage = 0
 
 #Open the election results and read the file.
 with open(file_to_load) as election_data:
@@ -50,11 +44,6 @@ with open(file_to_load) as election_data:
 
         #Add a vote to that candidate's count
         candidate_votes[candidate_name] +=1
-
-#Winning Candidate and winning count tracker
-winning_candidate = ""
-winning_count = 0
-winning_percentage = 0
 
 #Determine the percentage of votes for each candidate by looping through the
 #1. Iterate through the candidate list.
