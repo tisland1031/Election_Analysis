@@ -5,10 +5,10 @@
 import csv
 import os
 
-# Add a variable to load a file from a path.
-file_to_load = os.path.join("..", "Resources", "election_results.csv")
-# Add a variable to save the file to a path.
-file_to_save = os.path.join("analysis", "election_analysis.txt")
+#Assign a variable to load a file from a path.
+file_to_load = os.path.join("Resources", "election_results.csv")
+#Assign a variable to save the file to a path.
+file_to_save = os.path.join("analysis","election_analysis.txt")
 
 # Initialize a total vote counter.
 total_votes = 0
@@ -18,7 +18,7 @@ candidate_options = []
 candidate_votes = {}
 
 # 1: Create a county list and county votes dictionary.
-county_options = []
+county_lists = []
 county_votes ={}
 
 
@@ -30,25 +30,19 @@ winning_percentage = 0
 # 2: Track the largest county and county voter turnout.
 winning_county = ""
 winning_county_count = 0
+winning_county_percentage = 0
 
 
 # Read the csv and convert it into a list of dictionaries
 with open(file_to_load) as election_data:
-    file_reader = csv.reader(election_data)
+    reader = csv.reader(election_data)
 
 
     # Read the header
-<<<<<<< HEAD
-    header = next(file_reader)
-
-    # For each row in the CSV file.
-    for row in file_reader:
-=======
     header = next(reader)
 
     # For each row in the CSV file.
     for row in reader:
->>>>>>> 170fcefc4d07e31ed167648ed8f6e9d90c4ad784
 
         # Add to the total vote count
         total_votes = total_votes + 1
@@ -74,10 +68,10 @@ with open(file_to_load) as election_data:
 
         # 4a: Write an if statement that checks that the
         # county does not match any existing county in the county list.
-        if county_name not in county_options:
+        if county_name not in county_lists:
 
             # 4b: Add the existing county to the list of counties.
-            county_options.append(county_name)
+            county_lists.append(county_name)
 
             # 4c: Begin tracking the county's vote count.
             county_votes[county_name]= 0
