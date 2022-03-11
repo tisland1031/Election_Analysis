@@ -31,7 +31,7 @@ Election results:
 
 The script is successful running the above result. However, with modification the script could be used in other elections.
 
- - Proposed modification:
+ - Proposed modifications:
 
 	1. The script could be modified for county election and which candidate was the winner in each county.  
 
