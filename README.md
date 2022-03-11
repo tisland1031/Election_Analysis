@@ -25,9 +25,11 @@ Listed below are the election outcomes:
 -	The winner of the election was Dianna DeGetta. She received 73.8% of the vote for a total of 272,892 votes.
 
 Election results:
+
 ![election_results ](https://user-images.githubusercontent.com/96746207/157948384-87b0784e-3d03-48e2-941d-6af4b165d59d.png)
 
 ## Election-Audit Summary
+
 
 The script is successful running the above result. However, with modification the script could be used in other elections.
 
@@ -35,7 +37,10 @@ The script is successful running the above result. However, with modification th
 
 	1. The script could be modified for county election and which candidate was the winner in each county.  
 
-	2. 
+	2. Adding political parties to the dataset is another option for elections. Since Colorado officially recognizes seven political parties, the script could be modified to find the percentage of votes for each political party in the counties. Once we add political parties to the dataset we have numerous options to explore.    
+
+
+
 
 
 
